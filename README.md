@@ -1,1 +1,1 @@
-# javacore-gol-course
+# javacore-guide
