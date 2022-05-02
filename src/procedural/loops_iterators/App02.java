@@ -12,9 +12,7 @@ public class App02 {
         // inversion of the string
         for (int k = 0; k < chars.length / 2; k++) {
             swap(chars, k, chars.length - 1 - k);
-
         }
-
         String inversedString = new String(chars);
         System.out.println(inversedString);
     }
