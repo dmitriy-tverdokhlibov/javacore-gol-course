@@ -14,9 +14,11 @@ public class App02 {
             swap(chars, k, chars.length - 1 - k);
 
         }
+
         String inversedString = new String(chars);
         System.out.println(inversedString);
     }
+
     private static void swap(char[] array, int first, int second) {
         char tmp = array[first];
         array[first] = array[second];
