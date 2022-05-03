@@ -4,12 +4,11 @@ package procedural.loops_iterators;
 * @author dmitriy tverdokhlibov
  */
 
-public class App02 {
+public class Inverse {
     public static void main(String[] args) {
         String str = "qwerty";
         char[] chars = str.toCharArray();
 
-        // inversion of the string
         for (int k = 0; k < chars.length / 2; k++) {
             swap(chars, k, chars.length - 1 - k);
         }
