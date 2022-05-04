@@ -9,6 +9,7 @@ public class Inverse {
         String str = "qwerty";
         char[] chars = str.toCharArray();
 
+        // Turning the line, dividing the line into a array of characters
         for (int k = 0; k < chars.length / 2; k++) {
             swap(chars, k, chars.length - 1 - k);
         }
