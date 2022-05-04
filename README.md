@@ -1,4 +1,4 @@
-# javacore-guide
+# my-javacore-guide
 
   1.Procedural Java
     - loop/Iteration
