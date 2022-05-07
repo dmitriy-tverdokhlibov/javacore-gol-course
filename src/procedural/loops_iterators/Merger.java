@@ -11,27 +11,24 @@ public class Merger {
         System.out.println(Arrays.toString(mergedData));
     }
 
-    private static int[] merge(int[] firstArray, int[] secondArray) {
-        int[] result = new int[firstArray.length + secondArray.length];
+    private static int[] merge(int[] first, int[] second) {
+        int[] result = new int[first.length + second.length];
         int frsIndex = 0;
         int secIndex = 0;
-        while (frsIndex + secIndex != result.length - 1) {
-            if (secIndex == secondArray.length) {
-                while (frsIndex != firstArray.length) {
-                    result[frsIndex + secIndex] = firstArray[frsIndex++];
-                }
+        while (frsIndex + secIndex != result.length) {
+            if (secIndex == second.length) {
+                System.arraycopy(first, frsIndex, result, frsIndex + secIndex,
+                        first.length - frsIndex);
                 break;
-            } else if (frsIndex == firstArray.length) {
-                while (secIndex != secondArray.length) {
-                    result[frsIndex + secIndex] = secondArray[secIndex++];
-                }
+            } else if (frsIndex == first.length) {
+               System.arraycopy(second, secIndex, result, frsIndex + secIndex,
+                       second.length - secIndex);
                 break;
             }
-
-            if (firstArray[frsIndex] < secondArray[secIndex]) {
-                result[frsIndex + secIndex] = firstArray[frsIndex++];
+            if (first[frsIndex] < second[secIndex]) {
+                result[frsIndex + secIndex] = first[frsIndex++];
             } else {
-                result[frsIndex + secIndex] = secondArray[secIndex++];
+                result[frsIndex + secIndex] = second[secIndex++];
             }
         }
         return result;
