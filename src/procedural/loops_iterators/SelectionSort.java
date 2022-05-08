@@ -1,4 +1,4 @@
-package procedural;
+package procedural.loops_iterators;
 
 import java.util.Arrays;
 
