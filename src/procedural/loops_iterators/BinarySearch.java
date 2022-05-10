@@ -7,10 +7,18 @@ public class BinarySearch {
         int first = 0;
         int last = numArray.length - 1;
 
-        search(numArray, key, first, last);
+        //Using the iterative approach
+        searchIterative(numArray, key, first, last);
+
+        // Using the recursion approach
+        int result = searchRecursion(numArray, 0, numArray.length - 1 , key);
+        if (result == -1)
+            System.out.println("\nKey not found in given list!");
+        else
+            System.out.println("\nKey is found at location: "+result + " in the list");
     }
 
-    private static void search(int[] array, int key, int first, int last) {
+    private static void searchIterative(int[] array, int key, int first, int last) {
         int mid = (first + last) / 2;
         while (first <= last) {
             if (array[mid] < key) {
@@ -26,5 +34,20 @@ public class BinarySearch {
         if (first > last) {
             System.out.println("Element is not found!");
         }
+    }
+
+    private static int searchRecursion(int[] array, int low, int high, int key) {
+        if (high >= low){
+            int mid = low + (high - low) / 2;
+            if (array[mid] == key){
+                return mid;
+            }
+            if (array[mid] > key){
+                return searchRecursion(array, low, mid-1, key);
+            } else {
+                return searchRecursion(array,mid+1, high, key);//recursively search for key
+            }
+        }
+        return -1;
     }
 }
