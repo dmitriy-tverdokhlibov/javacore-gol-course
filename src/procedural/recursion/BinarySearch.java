@@ -20,9 +20,9 @@ public class BinarySearch {
                 return mid;
             }
             if (array[mid] > key){
-                return searchRecursion(array, low, mid-1, key);
+                return searchRecursion(array, low, mid - 1, key);
             } else {
-                return searchRecursion(array,mid+1, high, key);
+                return searchRecursion(array,mid + 1, high, key);
             }
         }
         return -1;
