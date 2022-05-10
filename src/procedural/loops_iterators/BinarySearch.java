@@ -6,7 +6,6 @@ public class BinarySearch {
         int key = 35;
         int first = 0;
         int last = numArray.length - 1;
-
         searchIterative(numArray, key, first, last);
     }
 

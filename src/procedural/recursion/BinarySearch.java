@@ -6,7 +6,6 @@ public class BinarySearch {
         int key = 35;
         int low = 0;
         int high = numArray.length - 1;
-
         int result = searchRecursion(numArray, 0, numArray.length - 1, key);
         if (result == -1)
             System.out.println("\nKey not found in given list!");
