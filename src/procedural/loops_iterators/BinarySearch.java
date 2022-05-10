@@ -10,12 +10,12 @@ public class BinarySearch {
         search(numArray, key, first, last);
     }
 
-    private static void search(int[] numArray, int key, int first, int last) {
+    private static void search(int[] array, int key, int first, int last) {
         int mid = (first + last) / 2;
         while (first <= last) {
-            if (numArray[mid] < key) {
+            if (array[mid] < key) {
                 first = mid + 1;
-            } else if (numArray[mid] == key){
+            } else if (array[mid] == key){
                 System.out.println("Element is found at index: " + mid);
                 break;
             } else {
