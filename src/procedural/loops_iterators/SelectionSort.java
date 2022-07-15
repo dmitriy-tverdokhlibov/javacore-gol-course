@@ -20,7 +20,7 @@ public class SelectionSort {
             }
         }
     }
-
+    // sort optimized
     public static void sortOptimized(int[] arr) {
         for (int barrier = 0; barrier < arr.length - 1; barrier++) {
             int element = arr[barrier];

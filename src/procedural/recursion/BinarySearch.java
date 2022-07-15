@@ -1,8 +1,11 @@
 package procedural.recursion;
 
 public class BinarySearch {
+    private static String s;
+
     public static void main(String[] args) {
         int[] numArray = {5, 10, 15, 20, 25, 30, 35};
+        String s = "";
         int key = 35;
         int low = 0;
         int high = numArray.length - 1;
