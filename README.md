@@ -1,4 +1,4 @@
-# my-javacore-guide
+# my-java-guide
  
 1. Procedural Java (loop/Iteration, recursion, dds, memory)
 2. Exception
